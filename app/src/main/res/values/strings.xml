@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Speak to Me</string>
+    <string name="press_mic">Tap the Mic</string>
+    <string name="speech_alert">Say something...</string>
+    <string name="default_text">Hi There!</string>
+    <string name="not_supported">Your device don\t support this feature. </string>
+
+
+</resources>
