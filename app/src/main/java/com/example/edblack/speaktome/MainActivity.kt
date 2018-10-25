@@ -1,7 +1,6 @@
 package com.example.edblack.speaktome
 
 import android.app.Activity
-import android.app.Activity.RESULT_OK
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -13,7 +12,6 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-
 class MainActivity : AppCompatActivity() {
 
     private val REQ_CODE_SPEECH_INPUT = 100
@@ -21,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         btn_speak.setOnClickListener {
 
@@ -43,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, Locale.getDefault());
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.speech_alert))
 
+
         try {
             startActivityForResult(intent, REQ_CODE_SPEECH_INPUT)
         } catch (a: ActivityNotFoundException) {
@@ -50,7 +48,6 @@ class MainActivity : AppCompatActivity() {
                     getString(R.string.not_supported),
                     Toast.LENGTH_SHORT).show()
         }
-
 
     }
 
